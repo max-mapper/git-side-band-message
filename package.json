@@ -1,0 +1,16 @@
+{
+  "name": "git-side-band-message",
+  "version": "0.0.1",
+  "main": "index.js",
+  "description": "encode strings into the packfile side-band format that git uses. e.g. write messages to stdout of git clone clients",
+  "author": "max ogden",
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxogden/git-side-band-message.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maxogden/git-side-band-message/issues"
+  },
+  "homepage": "https://github.com/maxogden/git-side-band-message"
+}
