@@ -2,11 +2,11 @@
 
 [![NPM](https://nodei.co/npm/git-side-band-message.png)](https://nodei.co/npm/git-side-band-message/)
 
-Encode strings into the packfile side-band format that git uses. Useful for sending messages to clients doing things like `git clone` so that your messages show up in their stdout.
+Encode strings into the packfile side-band format that git uses. Useful for sending messages to clients doing `git push` so that your messages show up in their stdout.
 
-You can use this with https://github.com/substack/pushover/
+Used in https://github.com/substack/git-http-backend
 
-Originally written by @dz0ny for https://github.com/substack/pushover/pull/10, modulified by me
+Inspired by @dz0ny from https://github.com/substack/pushover/pull/10, rewritten by me
 
 ## usage
 
