@@ -1,4 +1,3 @@
-var newline = new Buffer("\n")
 var defaultPrefix = new Buffer("\2")
 // details: https://www.kernel.org/pub/software/scm/git/docs/technical/protocol-capabilities.txt (side-band)
 module.exports = function encode(string, prefix) {
@@ -11,11 +10,10 @@ module.exports = function encode(string, prefix) {
   if (!Buffer.isBuffer(string)) string = new Buffer(string)
   if (prefix && !Buffer.isBuffer(prefix)) prefix = new Buffer(prefix)
   
-  var msg = Buffer.concat([prefix || defaultPrefix, string, newline])
+  var msg = Buffer.concat([prefix || defaultPrefix, string])
  
   var header = new Buffer(2)
   header.writeUInt16BE(msg.length + 4, 0)
   var encoded = Buffer.concat([new Buffer(header.toString('hex').toUpperCase()), msg])
-  // console.log('ENCODE', [header, header.toString('hex').toUpperCase(), msg, msg.length, msg.byteLength])
   return encoded
 }
